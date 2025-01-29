@@ -1,1 +1,1 @@
-# kisa-linux(centos7)
+# kisa-linux(centos 7)
