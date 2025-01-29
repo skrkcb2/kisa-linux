@@ -7,4 +7,4 @@
 - #### 3. U-10 (상)
    (X)inetd 은 systemd로 교체(systemctl)  
 - #### 4. U-17 (상)
-   /etc/hosts.equiv, $HOME/.rhosts 가 존재 X 
+   /etc/hosts.equiv, $HOME/.rhosts 현재 사용하지 않는다, SSH 로 대체 
