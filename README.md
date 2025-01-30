@@ -28,5 +28,27 @@
     웹서비스 링크 삭제(-FollowSymLinks),  
     파일 크기 제한(LimitRequestBody),  
     /var/www/html 말고 별도,  
-- #### 12. U-42 (상)    
-
+- #### 12. U-42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63    
+    OS 최신 패치
+    로그 관리
+    root 이외 UID 0 금지
+    wheel 관리  
+    /etc/login.defs 비밀번호 길이 설정  
+    /etc/login.defs 비밀번호 최대 기간 설정  
+    /etc/login.defs 비밀번호 최소 기간 설정  
+    불필요한 계정 삭제  
+    관리자 그룹에 최소한의 계정(etc/group에 root에 root만 두자)  
+    계정이 존재하지 않는 GID 삭제(find /path/to/directory -group groupname -perm -g+rwx 해당 구문으로 체크 후)
+    동일한 UID  
+    사용자 쉘 점검(로그인이 필요하지 않는 계정에 쉘 부여 여부 / UID 100 이하 60000 이상)  
+    사용자 쉘에 대한 환경설정 파일에서 session timeout 설정 여부 점검  
+    host.lpd 대체 host.allow, deny 를 권한 600 설정 및 소유자 ROOT  
+    umask 022(etc/profile) 설정  
+    홈 디렉토리 소유자 및 권한 설정  
+    홈 디렉토리 존재여부  
+    숨겨진 파일 디렉토리 검색 제거  
+    ssh 원격접속 허용(FTP, TELNET 쓰면 취약)  
+    FTP 서비스 중지  
+    FTP 서비스 실행시 FTP 계정 SHELL제한  
+    “ftpusers" 파일의 소유자가 root가 아니거나 파일의 권한이 640 이하가 아닌 경우
+  
