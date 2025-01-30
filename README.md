@@ -18,6 +18,15 @@
    (x)inetd말고 systemctl status nfs, nfs-server 로 체크
 - #### 9. U-26 (상)
    기본적으로 설치가 안되어있으나 설치 여부 확인(automount, autofs)
-- #### 9. U-27,28,29,30(31,32),33 (상)
-   체크 하시요(RPC /  NIS / tftp, talk, ntalk / sendmail / named 버전확인)
+- #### 10. U-27,28,29,30(31,32),33(34) (상)
+   체크 하시요(RPC /  NIS / tftp, talk, ntalk / sendmail / named 버전확인,allow-transper)
+- #### 11. U-35,36,37,38,39,40,41 (상) / 하위 디렉토리 옵션이 1순위  
+    디렉토리 리스팅(Options -Indexes),
+    ROOT를 통한실행 X,  
+    .htaccess,  
+    불필요한 파일 삭제,  
+    웹서비스 링크 삭제(-FollowSymLinks),  
+    파일 크기 제한(LimitRequestBody),  
+    /var/www/html 말고 별도,  
+- #### 12. U-42 (상)    
 
