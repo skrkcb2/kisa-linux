@@ -16,24 +16,27 @@
               path (string): 탐지 명령어
               check_point (string): 탐지 조건
 
-              if (위 탐지 조건 전체 참):
-                  cm_line:  점검 완료
+              위 탐지 조건 전체 참 이여야 할 떄
+                  cm_line :  점검 완료
                   rp_line:  점검 필요
-              elif (위 탐지 조건 중 하나라도 거짓):
+     
+              위 탐지 조건 중 하나라도 거짓일 떄
                   cm_line:  점검 필요
                   rp_line:  점검 완료
-              elif (위 탐지 조건 만 색깔 명시(아이 체크가 필요))
+     
+              위 탐지 조건 만 색깔 명시(아이 체크가 필요))
                   isCheck_line: 결과 출력
-              else (조건이 있지만 아이 체크가 필요한):
+     
+              조건이 있지만 아이 체크가 필요한
                   just_line: 결과 출력
           }
      
      설정 유형 3.
           "U_01_SSH(함수명)": {
-              path (string): 탐지 명령어
+              path (string): 아래 다중 명령어로 대체, "" 로 설정
               check_point (string): 탐지 조건
-              input_line (string): 해당 솔루션
-          }     
+              ex_line (string): 다중 명령어 실시
+           }     
      ```
   - ### 명령어를 통한 존재 여부
       ####  1. U-01 (상) root 계정 원격접속 제한(SSH, Telnet)
