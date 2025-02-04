@@ -1,4 +1,16 @@
 # KISA-LINUX(CENTOS 7)
+- ## 검사 유형
+  - #### 명령어를 통한 비교
+       ```
+       U-01 (상) / 계정관리 / root 계정 원격접속 제한
+       세부 내용: SSH, Telnet 의 root 접근 제한
+       검수 명령, 파트:
+          명령: cat /etc/ssh/sshd_config
+          파트: PermitRootLogin No
+       
+          명령: cat /etc/pam.d/login
+          파트: auth required pam_securetty.so
+          
 ### 검사 운영체제와 kisa 문서 솔루션의 차이
 - #### 1. U-02 (상)
    PW 복잡성 설정 시 기본으로 pam_cracklib.so 잡아 설정 / sysetm-auth에서 pam_pwquality로 적용
