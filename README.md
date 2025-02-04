@@ -1,5 +1,40 @@
 # KISA-LINUX(CENTOS 7)
-- ## 검사 유형
+- ### dic_linux_secure.py
+  - #### 코드 실행을 위한 설정 파일 (명령어, 탐지 조건, 솔루션)
+     ```
+     설정 유형 1:
+         ## 탐지 조건이 무조건 존재 해야 할 경우
+         "U_01_SSH(함수명)": {
+              path (string): 탐지 명령어
+              check_point (string): 탐지 조건
+              input_line (string): 해당 솔루션
+          }
+     
+     설정 유형 2.
+          ## 탐지 조건의 CASE CADE에 따라 세팅 할 경우
+          "U_05_FD_MNG(함수명)": {
+              path (string): 탐지 명령어
+              check_point (string): 탐지 조건
+
+              if (위 탐지 조건 전체 참):
+                  cm_line:  점검 완료
+                  rp_line:  점검 필요
+              elif (위 탐지 조건 중 하나라도 거짓):
+                  cm_line:  점검 필요
+                  rp_line:  점검 완료
+              elif (위 탐지 조건 만 색깔 명시(아이 체크가 필요))
+                  isCheck_line: 결과 출력
+              else (조건이 있지만 아이 체크가 필요한):
+                  just_line: 결과 출력
+          }
+     
+     설정 유형 3.
+          "U_01_SSH(함수명)": {
+              path (string): 탐지 명령어
+              check_point (string): 탐지 조건
+              input_line (string): 해당 솔루션
+          }     
+     ```
   - ### 명령어를 통한 존재 여부
       ####  1. U-01 (상) root 계정 원격접속 제한(SSH, Telnet)
        ```
