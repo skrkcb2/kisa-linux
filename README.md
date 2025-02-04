@@ -2,9 +2,9 @@
 - ## 검사 유형
   - #### 명령어를 통한 비교
        ```
-       U-01 (상) / 계정관리 / root 계정 원격접속 제한
+       U-01 (상) root 계정 원격접속 제한
        세부 내용: SSH, Telnet 의 root 접근 제한
-       검수 명령, 파트:
+       검수 명령 / 파트:
           명령: cat /etc/ssh/sshd_config
           파트: PermitRootLogin No
        
