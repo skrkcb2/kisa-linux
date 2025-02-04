@@ -3,8 +3,8 @@
   - ### 명령어를 통한 존재 여부
       ####  1. U-01 (상) root 계정 원격접속 제한(SSH, Telnet)
        ```
-       양호 조건: 원격 터미널 서비스를 사용하지 않거나, 사용 시 root 직접 접속을 차단
-       검수 명령 / 파트:
+       #양호 조건: 원격 터미널 서비스를 사용하지 않거나, 사용 시 root 직접 접속을 차단  
+        검수 명령 / 파트:
           명령: cat /etc/ssh/sshd_config
           파트: PermitRootLogin No
        
@@ -13,22 +13,23 @@
        ```
       ####  2. U-02 (상) 패스워드 복잡성 설정
        ```
-       양호 조건: 패스워드 최소길이 8자리 이상, 영문·숫자·특수문자 최소 입력
-       검수 명령 / 파트:
-          명령: cat /etc/pam.d/system-auth
-          파트: pam_pwquality.so
+       # 양호 조건: 패스워드 최소길이 8자리 이상, 영문·숫자·특수문자 최소 입력
+         검수 명령 / 파트:
+           명령: cat /etc/pam.d/system-auth
+           파트: pam_pwquality.so
        
-          명령: cat /etc/pam.d/password-auth
-          파트: pam_pwquality.so
+           명령: cat /etc/pam.d/password-auth
+           파트: pam_pwquality.so
        ```
-      ####  3. U-03 (상) 계정 잠금 임계값 설정(임계값이 10회 이하의 값으로 설정)
+      ####  3. U-03 (상) 계정 잠금 임계값 설정
        ```
-       검수 명령 / 파트:
-          명령: cat /etc/pam.d/system-auth 
-          파트: pam_pwquality.so
+       # 양호 조건: 임계값이 10회 이하의 값으로 설정
+         검수 명령 / 파트:
+           명령: cat /etc/pam.d/system-auth 
+           파트: pam_pwquality.so
        
-          명령: cat /etc/pam.d/password-auth
-          파트: pam_pwquality.so
+           명령: cat /etc/pam.d/password-auth
+           파트: pam_pwquality.so
        ``` 
       ####  3. U-04 (상) 패스워드 복잡성 설정       
           
