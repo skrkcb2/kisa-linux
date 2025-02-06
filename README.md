@@ -1,5 +1,5 @@
 # KISA-LINUX(CENTOS 7)
-- ### 해당 취약점 점검은 파이썬 코드를 통한 체크(U-56 까지 설정 / 점검 포인트가 존재 시 초록색 명시)
+- ### 해당 취약점 점검은 파이썬 코드 체크(U-56 까지 설정 / 점검 포인트가 존재 시 초록색 명시)
   ![20250206_102730](https://github.com/user-attachments/assets/2ec0d309-897c-4478-ae50-e0f2ea4d2d01)
 - ### dic_linux_secure2.py
   - #### 코드 실행을 위한 설정 파일 
